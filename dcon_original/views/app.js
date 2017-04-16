@@ -8,11 +8,19 @@ app.controller('statsCtrl', function($scope){
   $scope.aPercent = 50;
   $scope.bPercent = 50;
 
+  var version = 1
+
   var updateScores = function(){
     socket.on('scores', function (json) {
        data = JSON.parse(json);
        var a = parseInt(data.a || 0);
        var b = parseInt(data.b || 0);
+
+       var backendVer = parseInt(data.version || 0);
+       if (backendVer != version) {
+         console.log("reloading")
+         window.location.reload();
+       }
 
        var percentages = getPercentages(a, b);
 
