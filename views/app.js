@@ -8,7 +8,7 @@ app.controller('statsCtrl', function($scope){
   $scope.aPercent = 50;
   $scope.bPercent = 50;
 
-  var version = 1
+  var version = 2
 
   var updateScores = function(){
     socket.on('scores', function (json) {
