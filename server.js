@@ -46,7 +46,7 @@ function getVotes(client) {
       console.error("Error performing query: " + err);
     } else {
       var votes = collectVotesFromResult(result);
-      votes["version"] = 2
+      votes["version"] = 1
       io.sockets.emit("scores", JSON.stringify(votes));
     }
 
