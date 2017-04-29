@@ -1,14 +1,15 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 .divider{
-  height: 80%;
+  height: 150px;
 }
 #choice{
-  width: 680px;
-  height: 460px;
+  width: 450px;
+  height: 200px;
 }
 #choice .choice{
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
 }
 
 *{
